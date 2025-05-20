@@ -10,6 +10,8 @@ build:
 	rustc src/custom-types/structures.rs -o output/structures
 	rustc src/custom-types/enums.rs -o output/enums
 	rustc src/custom-types/constants.rs -o output/constants
+	rustc src/variable-bindings/mutability.rs -o output/mutability
+	rustc src/variable-bindings/scope-and-shadowing.rs -o output/scope-and-shadowing
 run:
 	output/formatted-print
 tuples:
@@ -24,6 +26,10 @@ enums:
 	output/enums
 constants:
 	output/constants
+mutability:
+	output/mutability
+scope-and-shadowing:
+	output/scope-and-shadowing
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print
