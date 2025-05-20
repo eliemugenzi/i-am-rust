@@ -7,6 +7,9 @@ build:
 	rustc src/primitives/operators.rs -o output/operators
 	rustc src/primitives/tuples.rs -o output/tuples
 	rustc src/primitives/arrays.rs -o output/arrays
+	rustc src/custom-types/structures.rs -o output/structures
+	rustc src/custom-types/enums.rs -o output/enums
+	rustc src/custom-types/constants.rs -o output/constants
 run:
 	output/formatted-print
 tuples:
@@ -15,6 +18,12 @@ operators:
 	output/operators
 arrays:
 	output/arrays
+structures:
+	output/structures
+enums:
+	output/enums
+constants:
+	output/constants
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print
