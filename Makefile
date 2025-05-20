@@ -12,6 +12,12 @@ build:
 	rustc src/custom-types/constants.rs -o output/constants
 	rustc src/variable-bindings/mutability.rs -o output/mutability
 	rustc src/variable-bindings/scope-and-shadowing.rs -o output/scope-and-shadowing
+	rustc src/types/casting.rs -o output/casting
+	rustc src/types/literals.rs -o output/literals
+	rustc src/types/inference.rs -o output/inference
+	rustc src/types/aliasing.rs -o output/aliasing
+	rustc src/conversion/conversion.rs -o output/conversion
+	rustc src/conversion/try-from.rs -o output/try-from
 run:
 	output/formatted-print
 tuples:
@@ -30,6 +36,18 @@ mutability:
 	output/mutability
 scope-and-shadowing:
 	output/scope-and-shadowing
+casting:
+	output/casting
+literals:
+	output/literals
+inference:
+	output/inference
+aliasing:	
+	output/aliasing
+conversion:
+	output/conversion
+try-from:
+	output/try-from
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print
@@ -37,6 +55,13 @@ clean:
 	rm -f output/operators
 	rm -f output/tuples
 	rm -f output/arrays
+	rm -f output/structures
+	rm -f output/enums
+	rm -f output/constants
+	rm -f output/mutability
+	rm -f output/scope-and-shadowing
+	rm -f output/casting
+	rm -f output/literals
 
 run-display:
 	output/formatted-print-display
