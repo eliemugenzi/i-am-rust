@@ -18,6 +18,10 @@ build:
 	rustc src/types/aliasing.rs -o output/aliasing
 	rustc src/conversion/conversion.rs -o output/conversion
 	rustc src/conversion/try-from.rs -o output/try-from
+	rustc src/flow-of-control/if-else.rs -o output/if-else
+	rustc src/flow-of-control/loop.rs -o output/loop
+	rustc src/flow-of-control/match.rs -o output/match
+	rustc src/flow-of-control/if-let.rs -o output/if-let
 run:
 	output/formatted-print
 tuples:
@@ -48,6 +52,14 @@ conversion:
 	output/conversion
 try-from:
 	output/try-from
+if-else:
+	output/if-else
+loop:
+	output/loop
+match:
+	output/match
+if-let:
+	output/if-let
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print

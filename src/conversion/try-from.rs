@@ -29,15 +29,15 @@ impl fmt::Display for Circle {
     }
 }
 
-impl FromStr for Circle {
-    type Err = ParseIntError;
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s.parse::<f32>() {
-            Ok(radius) => Ok(Circle { radius }),
-            Err(e) => Err(e),
-        }
-    }
-}
+// impl FromStr for Circle {
+//     type Err = ParseIntError;
+//     fn from_str(s: &str) -> Result<Self, Self::Err> {
+//         match s.parse::<f32>() {
+//             Ok(radius) => Ok(Circle { radius }),
+//             Err(e) => Err(e),
+//         }
+//     }
+// }
 
 fn main() {
     // Try from
@@ -59,7 +59,7 @@ fn main() {
     let sum = parsed + turbo_parsed;
     println!("The sum of {} and {} is {}", parsed, turbo_parsed, sum);
 
-    let radius = "    3";
-    let circle_: Circle = radius.parse().unwrap();
-    println!("Parsed circle: {:?}", circle_);
+    // let radius = "    3";
+    // let circle_: Circle = radius.parse().unwrap();
+    // println!("Parsed circle: {:?}", circle_);
 }
