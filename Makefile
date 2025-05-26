@@ -22,6 +22,11 @@ build:
 	rustc src/flow-of-control/loop.rs -o output/loop
 	rustc src/flow-of-control/match.rs -o output/match
 	rustc src/flow-of-control/if-let.rs -o output/if-let
+	rustc src/flow-of-control/functions.rs -o output/functions
+	rustc src/flow-of-control/closures.rs -o output/closures
+	rustc src/functions/higher_order_functions.rs -o output/higher_order_functions
+	rustc src/functions/diverging_functions.rs -o output/diverging_functions
+	rustc src/modules/visibility.rs -o output/visibility
 run:
 	output/formatted-print
 tuples:
@@ -60,6 +65,16 @@ match:
 	output/match
 if-let:
 	output/if-let
+functions:
+	output/functions
+closures:
+	output/closures
+higher_order_functions:
+	output/higher_order_functions
+diverging_functions:
+	outout/diverging_functions
+visibility:
+	output/visibility
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print
