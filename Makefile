@@ -27,6 +27,11 @@ build:
 	rustc src/functions/higher_order_functions.rs -o output/higher_order_functions
 	rustc src/functions/diverging_functions.rs -o output/diverging_functions
 	rustc src/modules/visibility.rs -o output/visibility
+	rustc src/generics/functions.rs -o output/generic-functions
+	rustc src/generics/traits.rs -o output/traits
+	rustc src/generics/bounds.rs -o output/bounds
+	rustc src/generics/new_type_idiom.rs -o output/new-type-idiom
+	rustc src/generics/associated_items.rs -o output/associated_items
 run:
 	output/formatted-print
 tuples:
@@ -75,6 +80,8 @@ diverging_functions:
 	outout/diverging_functions
 visibility:
 	output/visibility
+generic-functions:
+	outout/generic-functions
 clean:
 	rm -f output/formatted-print-debug
 	rm -f output/formatted-print
