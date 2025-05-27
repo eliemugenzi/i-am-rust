@@ -32,6 +32,10 @@ build:
 	rustc src/generics/bounds.rs -o output/bounds
 	rustc src/generics/new_type_idiom.rs -o output/new-type-idiom
 	rustc src/generics/associated_items.rs -o output/associated_items
+	rustc src/scoping-rules/ownership_and_moves.rs -o output/ownership_and_moves
+	rustc src/scoping-rules/borrowing.rs -o output/borrowing
+	rustc src/scoping-rules/the_ref_pattern.rs -o output/the_ref_pattern
+	rustc src/scoping-rules/lifetimes.rs -o output/lifetimes
 run:
 	output/formatted-print
 tuples:
@@ -83,19 +87,15 @@ visibility:
 generic-functions:
 	outout/generic-functions
 clean:
-	rm -f output/formatted-print-debug
-	rm -f output/formatted-print
-	rm -f output/formatted-print-display
-	rm -f output/operators
-	rm -f output/tuples
-	rm -f output/arrays
-	rm -f output/structures
-	rm -f output/enums
-	rm -f output/constants
-	rm -f output/mutability
-	rm -f output/scope-and-shadowing
-	rm -f output/casting
-	rm -f output/literals
+	rm -f output/*
 
 run-display:
 	output/formatted-print-display
+ownership_and_moves:
+	output/ownership_and_moves
+borrowing:
+	output/borrowing
+the_ref_pattern:
+	output/the_ref_pattern
+lifetimes:
+	output/lifetimes
