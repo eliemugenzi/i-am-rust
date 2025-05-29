@@ -36,6 +36,10 @@ build:
 	rustc src/scoping-rules/borrowing.rs -o output/borrowing
 	rustc src/scoping-rules/the_ref_pattern.rs -o output/the_ref_pattern
 	rustc src/scoping-rules/lifetimes.rs -o output/lifetimes
+	rustc src/scoping-rules/lifetime_structs.rs -o output/lifetime_structs
+	rustc src/scoping-rules/lifetime_traits.rs -o output/lifetime_traits
+	rustc src/scoping-rules/lifetime_bounds.rs -o output/lifetime_bounds
+	rustc src/scoping-rules/lifetime_static.rs -o output/lifetime_static
 run:
 	output/formatted-print
 tuples:
@@ -99,3 +103,11 @@ the_ref_pattern:
 	output/the_ref_pattern
 lifetimes:
 	output/lifetimes
+lifetime_structs:
+	output/lifetime_structs
+lifetime_traits:
+	output/lifetime_traits
+lifetime_bounds:
+	output/lifetime_bounds
+lifetime_static:
+	output/lifetime_static
