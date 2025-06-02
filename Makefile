@@ -39,7 +39,15 @@ build:
 	rustc src/scoping-rules/lifetime_structs.rs -o output/lifetime_structs
 	rustc src/scoping-rules/lifetime_traits.rs -o output/lifetime_traits
 	rustc src/scoping-rules/lifetime_bounds.rs -o output/lifetime_bounds
-	rustc src/scoping-rules/lifetime_static.rs -o output/lifetime_static
+	rustc src/traits/derive.rs -o output/derive
+	rustc src/traits/return_with_dyn.rs -o output/return_with_dyn
+	rustc src/traits/operator_overloading.rs -o output/operator_overloading
+	rustc src/traits/iterators.rs -o output/iterators
+	rustc src/traits/impl_trait.rs -o output/impl_trait
+	rustc src/traits/clone.rs -o output/clone
+	rustc src/macro-rules/syntax.rs -o output/macro_rules_syntax
+	rustc src/macro-rules/dsl.rs -o output/dsl
+	rustc src/macro-rules/variadic_interfaces.rs -o output/variadic_interfaces
 run:
 	output/formatted-print
 tuples:
@@ -109,5 +117,21 @@ lifetime_traits:
 	output/lifetime_traits
 lifetime_bounds:
 	output/lifetime_bounds
-lifetime_static:
-	output/lifetime_static
+derive:
+	output/derive
+return_with_dyn:
+	output/return_with_dyn
+operator_overloading:
+	output/operator_overloading
+iterators:
+	output/iterators
+impl_trait:
+	output/impl_trait
+clone:
+	output/clone
+macro_rules_syntax:
+	output/macro_rules_syntax
+dsl:
+	output/dsl
+variadic_interfaces:
+	output/variadic_interfaces
