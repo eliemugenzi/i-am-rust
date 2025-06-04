@@ -48,6 +48,15 @@ build:
 	rustc src/macro-rules/syntax.rs -o output/macro_rules_syntax
 	rustc src/macro-rules/dsl.rs -o output/dsl
 	rustc src/macro-rules/variadic_interfaces.rs -o output/variadic_interfaces
+	rustc src/error-handling/panic.rs -o output/panic
+	rustc src/std/box_stack_heap.rs -o output/box_stack_heap
+	rustc src/std/vectors.rs -o output/vectors
+	rustc src/std/strings.rs -o output/strings
+	rustc src/std/options.rs -o output/options
+	rustc src/std/result.rs -o output/result
+	rustc src/std/result_alt.rs -o output/result_alt
+	rustc src/std/hashmap.rs -o output/hashmap
+	rustc src/std/rc.rs -o output/rc
 run:
 	output/formatted-print
 tuples:
@@ -135,3 +144,21 @@ dsl:
 	output/dsl
 variadic_interfaces:
 	output/variadic_interfaces
+panic:
+	output/panic
+box_stack_heap:
+	output/box_stack_heap
+vectors:
+	output/vectors
+strings:
+	output/strings
+options:
+	output/options
+result:
+	output/result
+result_alt:
+	output/result_alt
+hashmap:
+	output/hashmap
+rc:
+	output/rc

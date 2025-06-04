@@ -5,6 +5,7 @@ macro_rules! calculate {
         println!("{} = {}", stringify! { $e }, val);
     };
 
+    // Decompose multiple `eval`s recursively
     (eval $e: expr, $(eval $es: expr), +) => {{
         calculate! { eval $e }
         calculate! { $(eval $es),+ }
